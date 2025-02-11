@@ -11,41 +11,60 @@ body {
     min-height: 100vh;
 }
 
-header {
-    margin-bottom: 30px;
-}
-
 header h1 {
     font-size: 48px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .story-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    width: 600px;
-    max-width: 90vw;
+    width: 90%;
+    max-width: 800px;
     transition: filter 0.3s ease;
 }
 
 .story-card {
+    position: relative;
     background: #2a2a35;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     color: white;
     text-align: center;
-    transition: transform 0.3s ease;
     min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.story-card:hover {
-    transform: scale(1.05);
+.story-card h3 {
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.story-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.story-card:hover h3 {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.story-card:hover img {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .expanded-story {
@@ -61,10 +80,11 @@ header h1 {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     z-index: 1001;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .close-btn {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
     font-size: 24px;
@@ -84,7 +104,13 @@ header h1 {
     transition: filter 0.3s ease;
 }
 
-#expandedStory,
-.close-btn {
-    filter: none !important;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
