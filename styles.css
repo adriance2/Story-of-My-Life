@@ -15,7 +15,6 @@ body {
 
 header h1 {
     font-size: 48px;
-    animation: fadeIn 1s ease-in-out;
     color: #2a2a35;
 }
 
@@ -200,6 +199,9 @@ header h1 {
 }
 
 @media (max-width: 600px) {
+    header{
+        margin-top: 60px;
+    }
     .story-grid {
         display: flex;
         flex-direction: column;
@@ -219,7 +221,7 @@ header h1 {
 
 .contact-section h2 {
     font-size: 28px;
-    color: #000000;
+    color: #FFFFFF;
     margin-bottom: 10px;
 }
 
@@ -239,7 +241,7 @@ header h1 {
 .social-icons a .icon {
     width: 100%;
     height: 100%;
-    fill: #000000;
+    fill: #FFFFFF;
     transition: fill 0.3s ease, opacity 0.3s ease;
 }
 
