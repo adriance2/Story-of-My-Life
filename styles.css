@@ -1,5 +1,6 @@
 body {
-    background-color: #1e1e1e;
+    background: url('images/pixel-jess-field.gif') no-repeat center center fixed;
+    background-size: cover;
     color: #e0e0e0;
     font-family: "Georgia", serif;
     text-align: center;
@@ -9,31 +10,37 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: filter 0.3s ease;
 }
 
 header h1 {
     font-size: 48px;
     animation: fadeIn 1s ease-in-out;
+    color: #2a2a35;
 }
 
 .story-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    width: 90%;
-    max-width: 800px;
+    width: 600px;
+    max-width: 90vw;
+    margin: auto;
+    justify-items: center;
     transition: filter 0.3s ease;
 }
 
 .story-card {
     position: relative;
-    background: #2a2a35;
+    background: rgba(0, 0, 0, 0.651); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     color: white;
     text-align: center;
     min-height: 200px;
+    width: 100%;
+    max-width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,16 +78,98 @@ header h1 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     width: 80%;
     max-width: 600px;
-    background: #2a2a35;
+    background: rgba(42, 42, 53, 0.9);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
     z-index: 1001;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1003;
+}
+
+#menuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+#menuButton img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-container.active #menuButton img {
+    transform: rotate(90deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: rgba(42, 42, 53, 0.7); 
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #ffcc00;
+}
+
+.menu-container.active .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.blur {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+.blur-background {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
 }
 
 .close-btn {
@@ -99,18 +188,66 @@ header h1 {
     display: none;
 }
 
-.blur {
-    filter: blur(5px);
-    transition: filter 0.3s ease;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-10px);
+        transform: translate(-50%, -50%) scale(0.95);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate(-50%, -50%) scale(1);
     }
+}
+
+@media (max-width: 600px) {
+    .story-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.contact-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.social-icons a .icon {
+    width: 100%;
+    height: 100%;
+    fill: #000000;
+    transition: fill 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons a:hover .icon {
+    fill: #ffcc00;
+    opacity: 1;
 }

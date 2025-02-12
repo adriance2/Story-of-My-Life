@@ -13,6 +13,17 @@
             <h1>The Story of My Life</h1>
         </header>
 
+        <div class="menu-container">
+            <button id="menuButton">
+                <img src="files/dropdown-menu-svgrepo-com.svg" alt="Menu">
+            </button>
+            <div class="dropdown-menu hidden">
+                <ul>
+                    <li><a href="Portfolio1\index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>        
+
         <div class="story-grid">
             <div class="story-card" onclick="expandStory('childhoodStory')">
                 <h3>Childhood Memories</h3>
@@ -31,6 +42,29 @@
                 <img src="images/ctu.png" alt="College">
             </div>
         </div>
+
+        <div class="contact-section">
+            <h2>Contact Me</h2>
+            <div class="social-icons">
+                <a href="https://github.com/adriance2" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.11.793-.26.793-.577v-2.17c-3.338.725-4.042-1.61-4.042-1.61-.546-1.386-1.334-1.755-1.334-1.755-1.09-.744.083-.729.083-.729 1.206.084 1.841 1.24 1.841 1.24 1.07 1.835 2.809 1.305 3.495.998.107-.775.418-1.305.762-1.606-2.665-.305-5.467-1.333-5.467-5.933 0-1.31.467-2.382 1.235-3.222-.123-.304-.535-1.53.118-3.186 0 0 1.008-.322 3.3 1.23a11.55 11.55 0 0 1 6.006 0c2.29-1.552 3.297-1.23 3.297-1.23.654 1.656.242 2.882.12 3.186.77.84 1.233 1.912 1.233 3.222 0 4.61-2.807 5.625-5.479 5.922.43.372.813 1.102.813 2.222v3.293c0 .32.192.694.8.575C20.565 21.795 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/joseadrianace.bascos" target="_blank" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                        <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.494V14.708h-3.13v-3.62h3.13V8.413c0-3.1 1.892-4.788 4.655-4.788 1.324 0 2.464.099 2.796.143v3.24l-1.918.001c-1.505 0-1.796.715-1.796 1.764v2.314h3.591l-.467 3.62h-3.124V24h6.126c.73 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+                    </svg>
+                </a>
+                <a href="mailto:joseadrianace.bascos@gmail.com" target="_blank" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon">
+                        <path d="M12 13.065 0 4.868V19.2A2.8 2.8 0 0 0 2.8 22h18.4a2.8 2.8 0 0 0 2.8-2.8V4.868l-12 8.197zM23.006 3.151a2.8 2.8 0 0 0-3.006-.232L12 9.935 3.999 2.919a2.8 2.8 0 0 0-3.008.232A2.8 2.8 0 0 0 0 5.6v.016l12 8.199 12-8.199V5.6a2.8 2.8 0 0 0-.994-2.449z"/>
+                    </svg>
+                </a>
+                
+            </div>
+        </div>
+
     </div>
 
     <div id="expandedStory" class="expanded-story hidden">

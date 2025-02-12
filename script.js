@@ -4,7 +4,7 @@ const stories = {
         text: "It was my 5th birthday when my parents bought me a bike. We went by the seaside and my dad taught me how to ride one. After a few weeks of trying and failing, I finally learned how to ride a bike. It was satisfying despite all the crashes I made."
     },
     elementaryStory: {
-        title: "The Randomness of Elementary",
+        title: "Elementary Activities",
         text: "Back in elementary, I participated in lots of different sports that were decided on a whim. I got interested in table tennis so I joined them for a year until I lost interest. Then I joined the volleyball team and also quit in a year due to me losing interest. The only thing I played for two consecutive years was chess as I somewhat enjoyed it."
     },
     highSchoolStory: {
@@ -42,3 +42,18 @@ function closeStory() {
     }, 300); 
     document.getElementById("main-content").classList.remove("blur");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById("menuButton");
+    const menuContainer = document.querySelector(".menu-container");
+
+    menuButton.addEventListener("click", () => {
+        menuContainer.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!menuContainer.contains(event.target)) {
+            menuContainer.classList.remove("active");
+        }
+    });
+});
