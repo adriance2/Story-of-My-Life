@@ -1,18 +1,18 @@
 const stories = {
     childhoodStory: {
-        title: "The Day I Learned to Ride a Bike",
+        title: "Dancing for Grades",
         text: "It was my 5th birthday when my parents bought me a bike. We went by the seaside and my dad taught me how to ride one. After a few weeks of trying and failing, I finally learned how to ride a bike. It was satisfying despite all the crashes I made."
     },
     elementaryStory: {
-        title: "Elementary Activities",
-        text: "Back in elementary, I participated in lots of different sports that were decided on a whim. I got interested in table tennis so I joined them for a year until I lost interest. Then I joined the volleyball team and also quit in a year due to me losing interest. The only thing I played for two consecutive years was chess as I somewhat enjoyed it."
+        title: "Acquaintance Party",
+        text: "I just spent most of the day with my friends, going around the campus. Watching the various events and eating at the stalls. Come night time, we ate together and watched the live stage performances. We also browsed around the booths available in-campus and had fun in the party."
     },
     highSchoolStory: {
-        title: "Highschool Stuff",
+        title: "Summer Stuff",
         text: "I was never good at math. I learned division when I was already in grade 7, which is why I was surprised when my teacher made me attend the math competition in our school back in grade 10. What's even more surprising is that I won 1st place. I also joined a couple of science quizzes from grade 7 up until grade 10. I only ever got 2nd or 3rd places because I refused to study or review before the quizzes."
     },
     collegeStory: {
-        title: "The College Experience",
+        title: "Christmas Vacation",
         text: "College was hard since I didn't know anyone in my classroom. The feeling was exacerbated when I found out that the subjects were considerably harder than the ones I was used to in high school. However, after a few months, I slowly got the hang of it but never fully grasped what was happening. To this day, I am not sure exactly how to approach college."
     }
 };
